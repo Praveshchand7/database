@@ -1,0 +1,14 @@
+<%- include('head') %>
+        <section>
+            <h1>Computer data</h1>
+            <p>Id: <%= computer.id %></p>
+            <p>Name: <%= computer.name %></p>
+            <p>Type: <%= computer.type %></p>
+            <p>Processor: <%= computer.processor %></p>
+            <p>Amount: <%= computer.amount %></p>
+            <% if(computer.imagename){ %>
+                <img src="/images/<%= computer.imagename %>" alt="Image of <%= computer.name %>">
+            <%}%>
+            
+        </section>
+<%- include('tail') %>

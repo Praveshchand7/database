@@ -1,0 +1,17 @@
+<%- include('head') %>
+        <h1><%= header %></h1>
+        <form action="<%= action %>" method="POST">
+            <% fields.forEach(field=>{ %>
+                <p>
+                    <label><%= field.name %></label>
+                    <input type="text"
+                        name="<%= field.name.toLowerCase() %>"
+                        size="<%= field.size %>"
+                        value="<%= field.value %>"
+                        <%= field.readonly %>
+                    >
+                </p>
+            <% }) %>
+            <button type="submit">Submit</button>
+        </form>
+<%- include('tail') %>
